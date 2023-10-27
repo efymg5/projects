@@ -1,0 +1,62 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//Thermo couple equations
+// Convert adc value to voltage 
+float 	ADCtoVoltage ( float ADC,int Vr)
+{	// Calculate & return voltage from adc 
+	float V;
+  V= (ADC*Vr)/1024;
+	return (V);
+	}
+
+float VoltagetoResistance ( float V)
+{
+	// Calculate & return rsistance fom voltage (K Ohms)
+	float R;
+	R = ((10*3.3/V)-10);
+	return (R);
+}
+
+ // Convert resistance to temp in K
+ float ResistancetoTempk ( float R)
+{
+	// Calculate  \& return value in celcius
+	float TempK;
+	TempK = (pow(1.0/T0)+(1.0/B)*log(R/R0));
+	return (TempK);
+}
+
+ // convert temp in k to c 
+ float KelvintoCelcius ( float K)
+{
+	// Calculate  \& return value in celcius
+	float C;
+	C = (K-273.15);
+	return (C);
+}
+
+int main(void)
+{
+    // Declare variables
+    float c, k, Vadc;
+	int a0,a1;
+
+    // Obtain values for a0 and a1
+  
+    
+    // Convert voltage to resistance
+	      =VoltagetoResistance ( float , float  );
+    printf ("\nThe resistance is %f  K ohms\n",);
+
+ // Convert resistance to temp in K
+      =ResistancetoTempk ( float , float  );
+    printf ("\nThe temperature in k is%f  degrees\n",);
+
+ // convert temp in k to c 
+     C =KelvintoCelcius ( float , float  );
+    printf ("\nThe Temperature is %f degrees celcius\n",);
+
+
+    return 0;
+}
