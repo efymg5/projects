@@ -23,10 +23,8 @@ int main()
     float CoupV, A0, CoupETC, CoupT, CompEMF;
 
 
-
         // User input for pins A0 and A1
-    float A0;
-    float A1;
+  
 
     printf("Please input value for A0\n");
     scanf("%f", &A0);
@@ -69,12 +67,12 @@ int main()
 
 /* Write a function here to convert ADC value to voltages. (Part a, equation 1)
 Call it from the main() function above */
-// Function to Calculate & return voltage from adc 
-float ADCtoVoltage ( float ADC, float vref)
+// Function to Calculate & return voltage from adc
+    float ADCtoVoltage ( float ADC, float vref)
     {	
 	float V;
     V = (ADC*vref)/1024;
-	return V;
+	return (V);
 	}
 /* Write a function to convert degrees K to degrees C  (Part b, (iv))
  // Convert resistance to temp in K

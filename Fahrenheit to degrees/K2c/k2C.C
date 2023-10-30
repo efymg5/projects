@@ -49,9 +49,6 @@ int main()
 
   float A0,ThermV,Res;
   float Vref=5.0;
-
-    // User input for pins A0 
-
  printf("Please input value for A0\n");
  scanf("%f", &A0);
 
@@ -61,9 +58,6 @@ int main()
  
  Res =VoltagetoResistance (ThermV );
     //printf ("\nThe resistance is %f  K ohms\n");
-   
-
-//convert temp in k to c 
    
  
      ThermTK = ResistancetoTempk ( T0 , B, Res, R0);
